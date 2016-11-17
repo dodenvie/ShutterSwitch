@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link rel="stylesheet" href="css/slide.css">
+<body>
+
+<section id="slide">
+    <ul>
+        <li><img src="img/1.JPG"/></li>
+        <li><img src="img/2.JPG"/></li>
+        <li><img src="img/3.JPG"/></li>
+        <li><img src="img/4.JPG"/></li>
+        <li><img src="img/5.JPG"/></li>
+    </ul>
+</section>
+<p>鼠标移入，自动轮播停止；鼠标上（左）移下一张，鼠标下（右）移下一张</p>
+<script src="js/jquery-3.1.1.js"></script>
+<script src="js/slide.js"></script>
+<script>
+    window.onload = function () {
+        louver.slide({
+            numberOfBlinds:20,//叶片数
+            slideVisibleTime:5000,//图片切换时间
+            color:"#333333",//切割的空隙颜色
+            margin:2,//外边距
+            width:1000,//容器宽度
+            height:700,//容器高度
+            gap:100,//切割间隙
+            animationSpeed:300,//动画过渡时间
+            hasLink : false,//是否有链接
+            orientation:'vertical'//动画形式，参数：vertical、horizontal、left、right、down、up
+        });
+    };
+</script>
+</body>
+</html>
